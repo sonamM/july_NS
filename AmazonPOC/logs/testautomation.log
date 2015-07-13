@@ -1,0 +1,18 @@
+12:09:56,924 ERROR [SoftAssertor] 
+12:09:56,925 ERROR [SoftAssertor] Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
+System info: host: 'Sonams-MacBook-Air-2.local', ip: '192.168.141.183', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.2', java.version: '1.7.0_79'
+Driver info: driver.version: SafariDriver
+12:09:56,925 ERROR [SoftAssertor] 
+12:09:56,925 ERROR [SoftAssertor] Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
+System info: host: 'Sonams-MacBook-Air-2.local', ip: '192.168.141.183', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.2', java.version: '1.7.0_79'
+Driver info: driver.version: SafariDriver
+12:09:56,931 INFO  [BaseTest] >.>.>.>.>.>.>.>.>.>.>.>.> Ending method 1::testSignInWithITafElement>.>.>.>.>.>.>.>.>.>.>.>.>Time Taken ::22 Seconds
+12:09:57,185 INFO  [TestListener] Test Name :Firefox Test - End
+12:09:57,185 INFO  [TestListener] ********Results*******
+12:09:59,411 INFO  [BaseTest] >.>.>.>.>.>.>.>.>.>.>.>.> Ending method 1::testSignInWithITafElement>.>.>.>.>.>.>.>.>.>.>.>.>Time Taken ::25 Seconds
+12:10:00,242 INFO  [TestListener] Test Name :Chrome Test - End
+12:10:00,242 INFO  [TestListener] ********Results*******
+12:10:00,243 INFO  [SuiteListener] Suite Name :Default Suite - End
+12:10:00,243 INFO  [SuiteListener] ********Results*******

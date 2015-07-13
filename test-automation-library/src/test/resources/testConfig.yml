@@ -1,0 +1,255 @@
+#Note: When the changes are made for this testConfig.yml, Please remember to copy changes to devConfig.yml as well
+testTypes: [Web, Mobile]
+
+xlsDataConfig:
+  'testData': '/Users/eTouch/eTaapGit/test-automation-version1/AmazonPOC/src/test/resources/testdata/cisco.xls'
+  'stageData': '/Users/eTouch/eTaapGit/test-automation-version1/AmazonPOC/src/test/resources/testdata/cisco-stage.xls'
+  
+defectConfig:
+ defectTool: Jira
+ projectId: 20974459868
+ defectOwner: /user/16693935729
+ username: 
+ password: 
+ url3: https://etouch.atlassian.net/
+ issueUrl: https://etouch.atlassian.net/rest/api/2/issue
+ keys:  ETAAPIHS
+ 
+tfsConfig:
+ collectionURL: http://tfs-na.ihs.com:8080/tfs/NA_Energy_Collection
+ userName: IHS\ULD49133
+ password: eTouch#12345
+ projectName: srcold2
+ mappingServerPath: $/Pangaea/Main/Apps/Navigate/SQA/Etouchtfstest/srcold2
+ mappingLocalPath: C:\Users\QB07129167-eTouch\Desktop\lavanya\downloadproject3
+ jniNativeBaseDir: ms_tfs_redist/native
+ workspaceName: tfsWorkspace12
+ maxReconections: 3
+ 
+testngConfig:
+ suiteListener: com.etouch.amazon.listener.SuiteListener
+ testListener: com.etouch.amazon.listener.TestListener
+ testngClass:
+ reporter: com.etouch.report.TestNGReporter
+ parallelMode: tests
+
+webConfig:
+ hub: localhost
+ port: 4001
+ URL: http://www.amazon.com
+ tool: Selenium
+ testEnv: local
+ testngClass:
+ - className: com.etouch.amazon.pages.test.TestAmazonMainPage
+   methodList: []
+ currentTestBeds: [Firefox]
+ 
+#webConfig:
+ #hub: 54.173.15.241
+ #port: 4444
+ #URL: http://www.amazon.com
+ #tool: Selenium
+ #testEnv: remote
+ #currentTestBeds: [Chrome]
+  
+ testBeds:
+ #FireFox TestBed
+ - testBedName: Firefox
+   browser:
+    name: fireFox
+    version: 25
+    driverLocation: 
+   platform: 
+    name: Windows
+    version: 8
+ #IE10 TestBed
+ - testBedName: InternetExplorer
+   browser:
+    name: InternetExplorer
+    version: 11
+    driverLocation: ..\\test-automation-library\\resources\\IEDriverServer.exe
+   platform: 
+    name: Windows
+    version: 8
+ #Chrome TestBed
+ - testBedName: Chrome
+   browser:
+    name: Chrome
+    version: 35
+    driverLocation: ..\\test-automation-library\\resources\\chromedriver.exe
+   platform: 
+    name: Windows
+    version: 8
+ #Safari TestBed
+ - testBedName: Safari
+   browser:
+    name: Safari
+    version: 2.28.0
+   platform: 
+    name: Windows
+    version: 8
+  
+#mobileConfig:
+ #hub: localhost
+ #port: 8889
+ #tool: ExperiTest
+ #testEnv: local
+ #currentTestBeds: []
+ 
+mobileConfig:
+ hub: 127.0.0.1
+ port: 4723
+ tool: Appium
+ testEnv: local
+ testngClass:
+ - className: com.etouch.amazon.pages.test.TestMobile
+   methodList: []
+ currentTestBeds: [AndroidNative]
+ 
+appiumConfig:
+ nodePath: C:/Lavanya/Software/Appium/node.exe
+ appiumJSPath: C:/Lavanya/Software/Appium/node_modules/appium/bin/Appium.js
+ macNodePath: /Applications/Appium.app/Contents/Resources/node/bin/node
+ macAppiumJSPath: /Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js
+ 
+ testBeds:
+  #ios TestBeds
+ - testBedName: iPhoneNative
+   device:
+    name: iPhone
+    udid: b260151b7058491bd4dcd99396da691f045c1bbc
+   browser:
+    name: iPhone
+    version: 7.1
+    driverLocation: /Users/eTouch
+   platform: 
+    name: iOS
+   app:
+    appPath: /Users/eTouch/Library/Developer/Xcode/DerivedData/ideation-evvzdvaovpasljdhlrdgimxuhndo/Build/Products/Debug-iphoneos/ideation.app	 
+    bundleId: com.apple.samplecode.MapSearch
+
+  #Android TestBeds
+ - testBedName: Android
+   device:
+    name: 0736c0c40b304c25
+    type: Device
+   browser:
+    name: 
+    version: 
+    driverLocation: 
+   platform: 
+    name: Android
+    version: 4.4.2
+   app:
+    appPackage: com.ihs.riginfomobile	 
+    appActivity: riginfomobile.droid.views.LoginView
+    
+   #Android TestBeds
+ - testBedName: AndroidNative
+   device:
+    name: 0736c0c40b304c25
+    type: Device
+   browser:
+    name: 
+    version: 
+    driverLocation: 
+   platform: 
+    name: Android
+    version: 4.4.2
+   app:
+    appPackage: com.experitest.ExperiBank
+    appActivity: .LoginActivity
+    
+   #Android TestBeds
+ - testBedName: AndroidHybridApp
+   device:
+    name: 0736c0c40b304c25
+    type: Device
+   browser:
+    name: 
+    version: 
+    driverLocation: 
+   platform: 
+    name: Android
+    version: 4.4.2
+   app:
+    appPackage: com.ihs.riginfomobile	 
+    appActivity: riginfomobile.droid.views.LoginView
+    
+   #Android TestBeds
+ - testBedName: AndroidChrome
+   device:
+    name: 0736c0c40b304c25
+    type: Device
+   browser:
+    name: Chrome
+    version: 42.0.2311.111
+    driverLocation: ../test-automation-library/resources/chromedriver
+   platform: 
+    name: Android
+    version: 4.4.2
+   app:
+    appPackage:
+    appActivity: 
+    
+    #Android TestBeds
+ - testBedName: AndroidBrowser
+   device:
+    name: 0736c0c40b304c25
+    type: Device
+   browser:
+    name: Chrome
+    version: 42.0.2311.111
+    driverLocation: ../test-automation-library/resources/chromedriver
+   platform: 
+    name: Android
+    version: 4.4.2
+   app:
+    appPackage:
+    appActivity: 
+        
+   #ios TestBeds
+ - testBedName: iPhoneNative
+   device:
+    name: iPhone
+    udid: b260151b7058491bd4dcd99396da691f045c1bbc
+   browser:
+    name: iPhoneNative
+    version: 7.1
+    driverLocation: /Users/eTouch
+   platform: 
+    name: iOS
+   app:
+    appPath: /Users/eTouch/Library/Developer/Xcode/DerivedData/ideation-evvzdvaovpasljdhlrdgimxuhndo/Build/Products/Debug-iphoneos/ideation.app	 
+    bundleId: com.apple.samplecode.MapSearch   
+    
+    #ios TestBeds
+ - testBedName: iPadNative
+   device:
+    name: iPad
+    udid: 33399d5ab4d538526e42dc77db0b964904d4728a
+   browser:
+    name: iPadNative
+    version: 7.0.4
+    driverLocation: /Users/eTouch
+   platform: 
+    name: iOS
+   app:
+    appPath: /Users/etouch/Documents/Mobile_Testing/recipes.app	 
+    bundleId: com.example.apple-samplecode.Recipes
+    
+ - testBedName: iPhoneNativeSim
+   device:
+    name: iPhone 6
+    udid: 
+   browser:
+    name: iPhone 6
+    version: 8.3
+    driverLocation: /Users/eTouch
+   platform: 
+    name: iOS
+   app:
+    appPath: /Users/etouch/Documents/Mobile_Testing/FoxBigBoardApp/Bigboard.app	 
+    bundleId: com.foxsports.Bigboard
+  
+ 
